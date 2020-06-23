@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Kaushan+Script&family=Montserrat&family=PT+Serif&family=Roboto&family=Rozha+One&family=Source+Serif+Pro&display=swap");
+/* Colors */
+/* Fonts */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.header {
+  background-color: #579c87;
+  padding: 1rem 0;
+}
+.header__link {
+  text-decoration: none;
+}
+.header__title {
+  font-family: "montserrat", sans-serif;
+  text-align: center;
+  color: #fdcb46;
+}
+
+/*# sourceMappingURL=style.css.map */
