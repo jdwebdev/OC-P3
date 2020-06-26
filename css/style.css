@@ -68,7 +68,6 @@ main {
   width: 60vw;
   transform: scale(1);
   transition: transform 0.4s ease-in-out;
-  text-overflow: hidden;
 }
 .menu__link:hover div {
   transform: scale(1.2);
@@ -173,6 +172,18 @@ main {
   font-size: 1rem;
   color: #fdcb46;
   text-decoration: none;
+}
+.footer__link:hover {
+  animation: wiggle 0.3s infinite;
+}
+
+@keyframes wiggle {
+  25% {
+    transform: rotateZ(5deg);
+  }
+  75% {
+    transform: rotateZ(-5deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
