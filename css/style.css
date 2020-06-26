@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Kaushan+Script&family=Montserrat&family=PT+Serif&family=Roboto&family=Rozha+One&family=Source+Serif+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Kaushan+Script&family=Montserrat:wght@400;700&family=PT+Serif&family=Roboto&family=Rozha+One&family=Source+Serif+Pro&display=swap");
+/* todo : @font-faceface */
+@font-face {
+  font-family: "segoe_print";
+  src: url("../../fonts/SegoePrint.ttf");
+  font-weight: normal;
+  font-size: normal;
+}
 /* Colors */
 /* Fonts */
 * {
@@ -13,14 +20,159 @@ body {
 .header {
   background-color: #579c87;
   padding: 1rem 0;
+  z-index: 10;
 }
 .header__link {
   text-decoration: none;
 }
 .header__title {
   font-family: "montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
   text-align: center;
   color: #fdcb46;
+}
+
+main {
+  margin-bottom: 5rem;
+}
+
+.menu {
+  width: 75vw;
+  height: 280px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  box-shadow: 0px 0px 8px #ccc;
+  text-align: center;
+}
+.menu__img {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.menu__link {
+  height: 100%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__link h2 {
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.menu__link div {
+  margin: 0 15px;
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+  text-overflow: hidden;
+}
+.menu__link:hover div {
+  transform: scale(1.2);
+  opacity: 0.6;
+}
+.menu__note {
+  background-color: #fcdfdb;
+  font-family: "segoe_print", sans-serif;
+  color: #3c1218;
+  text-transform: uppercase;
+}
+.menu__note .menu__link {
+  color: #3c1218;
+}
+.menu__note h2 {
+  font-family: "Devonshire", cursive;
+  font-weight: 500;
+  text-transform: initial;
+}
+.menu__chic {
+  background-color: #fff5fe;
+  font-family: "Rozha One", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__chic .menu__link {
+  color: #c77412;
+}
+.menu__chic h2 {
+  font-size: 1rem;
+  font-family: "Croissant One", cursive;
+  background: linear-gradient(to right, #d8852e, #905bfd);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.menu__delice {
+  background-color: #f9f9f9;
+  font-family: "segoe_print", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__delice .menu__link {
+  color: #0887fb;
+}
+.menu__delice h2 {
+  font-family: "Dancing Script", cursive;
+  background: linear-gradient(to right, #0431df, #0887fb);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.menu__palette {
+  background-color: #fdfffd;
+  font-family: "segoe_print", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__palette .menu__link {
+  color: #72bf56;
+}
+.menu__palette h2 {
+  font-family: "Kaushan Script", cursive;
+  background: linear-gradient(to right, #3d9339, #bfff7e);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.soon {
+  background-color: #579c87;
+  width: 80vw;
+  border-radius: 0.5rem;
+  margin: 1.5rem auto;
+  padding: 0.5rem 0;
+}
+.soon__text {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: #fdcb46;
+  text-align: center;
+}
+
+.footer {
+  background-color: #579c87;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__link {
+  font-family: "montserrat", sans-serif;
+  font-size: 1rem;
+  color: #fdcb46;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
