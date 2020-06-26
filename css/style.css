@@ -144,18 +144,46 @@ main {
 
 .soon {
   background-color: #579c87;
-  width: 80vw;
+  height: 50px;
+  width: 75vw;
   border-radius: 0.5rem;
   margin: 1.5rem auto;
-  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .soon__text {
   font-family: "montserrat", sans-serif;
   font-size: 1.5rem;
   color: #fdcb46;
-  text-align: center;
+}
+.soon__dots {
+  margin-left: 15px;
+  height: 90%;
+  display: flex;
+  color: #fdcb46;
+  font-size: 2rem;
+}
+.soon__dots div {
+  width: 10px;
+  opacity: 0;
+}
+.soon__dot1 {
+  animation: soonAnim 1s 0s infinite;
+}
+.soon__dot2 {
+  animation: soonAnim 1s 0.2s infinite;
+}
+.soon__dot3 {
+  animation: soonAnim 1s 0.4s infinite;
 }
 
+@keyframes soonAnim {
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
 .footer {
   background-color: #579c87;
   position: fixed;

@@ -161,15 +161,53 @@ main{
 
 .soon{
     background-color: $main-bg-color;
-    width:80vw;
+    height:50px;
+    width:75vw;
     border-radius:0.5rem;
     margin: 1.5rem auto;
-    padding: 0.5rem 0;
+    // padding: 0.5rem 0;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
     &__text{
         font-family: $header-footer-font;
         font-size:1.5rem;
         color:$main-txt-color;
-        text-align: center;
+    }
+    &__dots{
+        margin-left: 15px;
+        height:90%;
+        display:flex;
+        
+        color:$main-txt-color;
+        font-size:2rem;
+        
+        div{
+            width:10px;
+            opacity: 0;
+        }
+    }
+    &__dot1{
+        animation: soonAnim 1s 0s infinite;
+    }
+    &__dot2{
+        animation: soonAnim 1s 0.2s infinite;
+    }
+    &__dot3{
+        animation: soonAnim 1s 0.4s infinite;
+    }
+}
+
+
+
+@keyframes soonAnim {
+    
+    50%{
+        transform:scale(1.5);
+        opacity: 1;
     }
 }
 
@@ -208,3 +246,4 @@ main{
         transform: rotateZ(-5deg);
     }
 }
+
