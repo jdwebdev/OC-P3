@@ -58,12 +58,12 @@ main{
         justify-content: center;
         
         h2{
-            padding:0.5rem;
+            // padding:0.5rem;
             font-size:1.4rem;
             margin-bottom:1rem;
         }
         div{
-            margin:0 15px;
+            margin:0 1.5rem;
 
             transform: scale(1);
             transition: transform 0.4s ease-in-out;
@@ -84,10 +84,7 @@ main{
         
         color: $note-txt-color;
         text-transform: uppercase;
-        
-
-        
-
+    
         .menu__link{
             color: $note-txt-color;
         }
@@ -103,8 +100,6 @@ main{
         background-color: $chic-bg-color;
         font-family: $chic-menu-font;
         
-                
-
         display:flex;
         flex-direction:column;
         justify-content: center;
