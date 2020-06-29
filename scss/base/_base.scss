@@ -279,7 +279,26 @@ main{
         align-items: center;
 
         &__title{
-            // font-size: 1rem;
+            font-size: 1.3rem;
+            
+            &::after{
+                content:"";
+                display:block;
+                position: relative;
+                top:-5px;
+                height:2px;
+                
+                transform-origin: left;
+                transition: all 0.5s ease-in-out;
+                @include underlineOutAnim;
+            }
+            
+            &__note1:hover::after{
+                @include underlineAnim(green);
+            }
+            &__note2:hover::after{
+                @include underlineAnim(red);
+            }
         }
 
         &__bar{
@@ -310,8 +329,5 @@ main{
             font-weight: 500;
         }
     }
-
-    
-
 }
 

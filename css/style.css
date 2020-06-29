@@ -243,6 +243,57 @@ main {
   flex-direction: column;
   align-items: center;
 }
+.card__section__title {
+  font-size: 1.3rem;
+}
+.card__section__title::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  height: 2px;
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
+  animation: underlineOut 0.5s ease-in-out forwards;
+}
+@keyframes underlineOut {
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+.card__section__title__note1:hover::after {
+  background-color: green;
+  animation: underline 0.5s ease-in-out forwards;
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.card__section__title__note2:hover::after {
+  background-color: red;
+  animation: underline 0.5s ease-in-out forwards;
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
 .card__section__bar {
   width: 30vw;
 }

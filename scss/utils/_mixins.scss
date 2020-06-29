@@ -1,0 +1,32 @@
+@mixin underlineAnim ($color){
+    
+    background-color: $color;
+    animation: underline 0.5s ease-in-out forwards;
+    
+    @keyframes underline {
+        from{
+            transform: scaleX(0);
+            opacity: 0;
+        }
+        to{
+            transform: scaleX(1);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin underlineOutAnim {
+
+    animation: underlineOut 0.5s ease-in-out forwards;
+
+    @keyframes underlineOut {
+        from{
+            transform: scaleX(1);
+            opacity: 1;
+        }
+        to{
+            transform: scaleX(0);
+            opacity: 0;
+        }
+    }
+}
