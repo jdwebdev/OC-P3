@@ -74,7 +74,7 @@ main{
     
     &__note{
         background-color: $note-bg-color;
-        font-family: $segoe-font;
+        font-family: $card-font;
         
         color: $note-txt-color;
         text-transform: uppercase;
@@ -114,7 +114,7 @@ main{
     }
     &__delice{
         background-color: $delice-bg-color;
-        font-family: $segoe-font;
+        font-family: $card-font;
 
         display:flex;
         flex-direction:column;
@@ -134,7 +134,7 @@ main{
     }
     &__palette{
         background-color: $palette-bg-color;
-        font-family: $segoe-font;
+        font-family: $card-font;
 
         display:flex;
         flex-direction:column;
@@ -165,7 +165,6 @@ main{
     width:75vw;
     border-radius:0.5rem;
     margin: 1.5rem auto;
-    // padding: 0.5rem 0;
 
     display:flex;
     justify-content: center;
@@ -225,7 +224,6 @@ main{
     justify-content: space-between;
 
     &__link{
-        // display:block;
         font-family: $header-footer-font;
         font-size:1rem;
         color: $main-txt-color;
@@ -245,5 +243,75 @@ main{
     75%{
         transform: rotateZ(-5deg);
     }
+}
+
+
+
+/* pages */
+.normalTitle{
+    text-align:center;
+    margin: 1rem 0;
+}
+
+.card{
+    width: 80vw;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 0px 0px 8px #ccc;
+    font-family: $card-font;
+    font-size:1rem;
+    color: $note-txt-color;
+    text-align:center;
+
+    &__note{
+        background-color: $note-bg-color;
+        &__title{
+            font-family: $note-title-font;
+            font-weight:500;
+            font-size: 2rem;
+        }
+    }
+
+    &__section{
+        margin:1rem 0;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title{
+            // font-size: 1rem;
+        }
+
+        &__bar{
+            width:30vw;
+        }
+    }
+
+    &__li{
+        margin-bottom: 0.8rem;
+        list-style-type: none;
+        display:flex;
+        flex-direction: column;
+    }
+
+    &__footer{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__img{
+            width:50px;
+            height:50px;
+        }
+        h3{
+            font-family: $note-title-font;
+            font-size:1.2rem;
+            font-weight: 500;
+        }
+    }
+
+    
+
 }
 
