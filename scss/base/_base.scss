@@ -277,6 +277,22 @@ main{
             color:transparent;
         }
     }
+    &__delice{
+        background-color: $delice-bg-color;
+        font-family: $card-font;
+
+        &__title{
+            font-family: $delice-title-font;
+            font-size:2rem;
+            background: linear-gradient(to right,#0431df,#0887fb);
+            -webkit-background-clip:text;
+            color:transparent;
+        }
+
+        h3{
+            font-size:1.1rem;
+        }
+    }
 
     &__section{
         margin:1rem 0;
@@ -311,6 +327,15 @@ main{
             &__chic3:hover::after{
                 @include underlineAnim($chic-color3);
             }
+            &__delice1:hover::after{
+                @include underlineAnim($delice-color1);
+            }
+            &__delice2:hover::after{
+                @include underlineAnim($delice-color2);
+            }
+            &__delice3:hover::after{
+                @include underlineAnim($delice-color3);
+            }
         }
         &__chic{
             font-family: $chic-cardtitle-font;
@@ -328,6 +353,9 @@ main{
 
         &__bar{
             width:30vw;
+            &--left{
+                transform: rotateX(180deg);
+            }
         }
     }
 

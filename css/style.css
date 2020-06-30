@@ -250,6 +250,20 @@ main {
   -webkit-background-clip: text;
   color: transparent;
 }
+.card__delice {
+  background-color: #f9f9f9;
+  font-family: "segoe_print", sans-serif;
+}
+.card__delice__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  background: linear-gradient(to right, #0431df, #0887fb);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.card__delice h3 {
+  font-size: 1.1rem;
+}
 .card__section {
   margin: 1rem 0;
   display: flex;
@@ -335,6 +349,48 @@ main {
     opacity: 1;
   }
 }
+.card__section__title__delice1:hover::after {
+  background-color: #0228dd;
+  animation: underline 0.5s ease-in-out forwards;
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.card__section__title__delice2:hover::after {
+  background-color: #0670f3;
+  animation: underline 0.5s ease-in-out forwards;
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.card__section__title__delice3:hover::after {
+  background-color: #229df9;
+  animation: underline 0.5s ease-in-out forwards;
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
 .card__section__chic {
   font-family: "Source Serif Pro", serif;
   font-size: 1.2rem;
@@ -350,6 +406,9 @@ main {
 }
 .card__section__bar {
   width: 30vw;
+}
+.card__section__bar--left {
+  transform: rotateX(180deg);
 }
 .card__li {
   margin-bottom: 0.8rem;
