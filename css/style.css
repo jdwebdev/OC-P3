@@ -67,7 +67,7 @@ main {
   margin: 0 auto;
   width: 60vw;
   transform: scale(1);
-  transition: transform 0.4s ease-in-out;
+  transition: all 0.4s;
 }
 .menu__link:hover div {
   transform: scale(1.2);
@@ -154,7 +154,7 @@ main {
 }
 .soon__text {
   font-family: "montserrat", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #fdcb46;
 }
 .soon__dots {
@@ -266,22 +266,8 @@ main {
     opacity: 0;
   }
 }
-.card__section__title__note1:hover::after {
-  background-color: green;
-  animation: underline 0.5s ease-in-out forwards;
-}
-@keyframes underline {
-  from {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-  to {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-}
-.card__section__title__note2:hover::after {
-  background-color: red;
+.card__section__title__note:hover::after {
+  background-color: #3c1218;
   animation: underline 0.5s ease-in-out forwards;
 }
 @keyframes underline {
