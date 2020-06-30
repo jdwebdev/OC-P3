@@ -226,18 +226,29 @@ main {
   margin: 0 auto;
   padding: 1rem;
   box-shadow: 0px 0px 8px #ccc;
-  font-family: "segoe_print", sans-serif;
   font-size: 1rem;
-  color: #3c1218;
   text-align: center;
 }
 .card__note {
   background-color: #fcdfdb;
+  font-family: "segoe_print", sans-serif;
+  color: #3c1218;
 }
 .card__note__title {
   font-family: "Devonshire", cursive;
   font-weight: 500;
   font-size: 2rem;
+}
+.card__chic {
+  background-color: #fff5fe;
+  font-family: "PT Serif", serif;
+}
+.card__chic__title {
+  font-family: "Croissant One", cursive;
+  font-weight: lighter;
+  background: linear-gradient(to right, #d8852e, #905bfd);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .card__section {
   margin: 1rem 0;
@@ -252,7 +263,7 @@ main {
   content: "";
   display: block;
   position: relative;
-  top: -5px;
+  top: -4px;
   height: 2px;
   transform-origin: left;
   transition: all 0.5s ease-in-out;
@@ -282,6 +293,61 @@ main {
     opacity: 1;
   }
 }
+.card__section__title__chic1:hover::after {
+  background-color: #c77412;
+  animation: underline 0.5s ease-in-out forwards;
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.card__section__title__chic2:hover::after {
+  background-color: #a56799;
+  animation: underline 0.5s ease-in-out forwards;
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.card__section__title__chic3:hover::after {
+  background-color: #6e4ccc;
+  animation: underline 0.5s ease-in-out forwards;
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.card__section__chic {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.2rem;
+}
+.card__section__chic1 h3, .card__section__chic1 + ul {
+  color: #c77412;
+}
+.card__section__chic2 h3, .card__section__chic2 + ul {
+  color: #a56799;
+}
+.card__section__chic3 h3, .card__section__chic3 + ul {
+  color: #6e4ccc;
+}
 .card__section__bar {
   width: 30vw;
 }
@@ -293,6 +359,9 @@ main {
 }
 .card__li p:nth-child(2) {
   font-weight: bold;
+}
+.card__li__chic p:nth-child(2) {
+  font-weight: normal;
 }
 .card__footer {
   display: flex;

@@ -31,20 +31,16 @@ main{
 .menu{
     width:75vw;
     height:280px;
-
     margin: 0 auto;
     margin-top:2rem;
     box-shadow: 0px 0px 8px #ccc;
     text-align:center;
-
 
     &__img{
         width:50px;
         height:50px;
         margin:0 auto;
     }
-
-
 
     &__link{
         height:100%;
@@ -254,17 +250,31 @@ main{
     margin: 0 auto;
     padding: 1rem;
     box-shadow: 0px 0px 8px #ccc;
-    font-family: $card-font;
     font-size:1rem;
-    color: $note-txt-color;
     text-align:center;
 
     &__note{
         background-color: $note-bg-color;
+        font-family: $card-font;
+        color: $note-txt-color;
+        
         &__title{
             font-family: $note-title-font;
             font-weight:500;
             font-size: 2rem;
+        }
+    }
+
+    &__chic{
+        background-color: $chic-bg-color;
+        font-family: $chic-txt-font;
+
+        &__title{
+            font-family: $chic-title-font;
+            font-weight: lighter;
+            background: linear-gradient(to right,#d8852e,#905bfd);
+            -webkit-background-clip:text;
+            color:transparent;
         }
     }
 
@@ -276,12 +286,12 @@ main{
 
         &__title{
             font-size: 1.3rem;
-            
+
             &::after{
                 content:"";
                 display:block;
                 position: relative;
-                top:-5px;
+                top:-4px;
                 height:2px;
                 
                 transform-origin: left;
@@ -292,6 +302,28 @@ main{
             &__note:hover::after{
                 @include underlineAnim($note-txt-color);
             }
+            &__chic1:hover::after{
+                @include underlineAnim($chic-color1);
+            }
+            &__chic2:hover::after{
+                @include underlineAnim($chic-color2);
+            }
+            &__chic3:hover::after{
+                @include underlineAnim($chic-color3);
+            }
+        }
+        &__chic{
+            font-family: $chic-cardtitle-font;
+            font-size:1.2rem;
+        }
+        &__chic1 h3, &__chic1+ul{
+            color: $chic-color1;
+        }
+        &__chic2 h3, &__chic2+ul{
+            color: $chic-color2;
+        }
+        &__chic3 h3, &__chic3+ul{
+            color: $chic-color3;
         }
 
         &__bar{
@@ -306,6 +338,9 @@ main{
         flex-direction: column;
         p:nth-child(2){
             font-weight:bold;
+        }
+        &__chic p:nth-child(2){
+            font-weight: normal;            
         }
     }
 
