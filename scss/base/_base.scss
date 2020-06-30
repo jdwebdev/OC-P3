@@ -293,6 +293,20 @@ main{
             font-size:1.1rem;
         }
     }
+    &__palette{
+        background-color: $palette-bg-color;
+        font-family: $card-font;
+        &__title{
+            font-family: $palette-title-font;
+            font-size: 2rem;
+            background: linear-gradient(to right,#3d9339,#bfff7e);
+            -webkit-background-clip:text;
+            color:transparent;
+        }
+        h3{
+            font-size: 1.1rem;
+        }
+    }
 
     &__section{
         margin:1rem 0;
@@ -335,6 +349,9 @@ main{
             }
             &__delice3:hover::after{
                 @include underlineAnim($delice-color3);
+            }
+            &__palette:hover::after{
+                @include underlineAnim($palette-txt-color);
             }
         }
         &__chic{
