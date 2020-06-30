@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Kaushan+Script&family=Montserrat:wght@400;700&family=PT+Serif&family=Roboto&family=Rozha+One&family=Source+Serif+Pro&display=swap");
 /* todo : @font-faceface */
 @font-face {
@@ -215,6 +216,7 @@ main {
 }
 /* pages */
 .normalTitle {
+  font-family: "Roboto", sans-serif;
   text-align: center;
   margin: 1rem 0;
 }
@@ -289,6 +291,9 @@ main {
   display: flex;
   flex-direction: column;
 }
+.card__li p:nth-child(2) {
+  font-weight: bold;
+}
 .card__footer {
   display: flex;
   flex-direction: column;
@@ -303,6 +308,28 @@ main {
   font-family: "Devonshire", cursive;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+/* Mentions légales */
+.mentions {
+  background-color: #579c87;
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 80vw;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px #ccc;
+  text-align: center;
+}
+.mentions h2 {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #fdcb46;
+  margin-bottom: 1rem;
+}
+.mentions p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
