@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Kaushan+Script&family=Montserrat:wght@400;700&family=PT+Serif&family=Roboto&family=Rozha+One&family=Source+Serif+Pro&display=swap");
-/* todo : @font-faceface */
 @font-face {
   font-family: "segoe_print";
   src: url("../fonts/SegoePrint.ttf") format("truetype");
@@ -9,6 +8,9 @@
 }
 /* Colors */
 /* Fonts */
+/* Media queries */
+/* Animations */
+/* Media queries */
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +40,18 @@ body {
 main {
   margin-bottom: 5rem;
 }
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    max-width: 800px;
+  }
+}
 
 .menu {
   width: 75vw;
@@ -46,6 +60,11 @@ main {
   margin-top: 2rem;
   box-shadow: 0px 0px 8px #ccc;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 250px;
+  }
 }
 .menu__img {
   width: 50px;
@@ -69,6 +88,11 @@ main {
   width: 60vw;
   transform: scale(1);
   transition: all 0.4s;
+}
+@media screen and (min-width: 768px) {
+  .menu__link div {
+    width: 80%;
+  }
 }
 .menu__link:hover div {
   transform: scale(1.2);
@@ -117,7 +141,8 @@ main {
 }
 .menu__delice h2 {
   font-family: "Dancing Script", cursive;
-  background: linear-gradient(to right, #0431df, #0887fb);
+  font-weight: lighter;
+  background: linear-gradient(to right, #0228dd, #229df9);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -142,6 +167,12 @@ main {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .flex {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 
 .soon {
   background-color: #579c87;
@@ -152,6 +183,11 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .soon {
+    width: 50%;
+  }
 }
 .soon__text {
   font-family: "montserrat", sans-serif;
@@ -170,21 +206,33 @@ main {
   opacity: 0;
 }
 .soon__dot1 {
-  animation: soonAnim 1s 0s infinite;
+  animation: soon 1s 0s infinite;
 }
-.soon__dot2 {
-  animation: soonAnim 1s 0.2s infinite;
-}
-.soon__dot3 {
-  animation: soonAnim 1s 0.4s infinite;
-}
-
-@keyframes soonAnim {
+@keyframes soon {
   50% {
     transform: scale(1.5);
     opacity: 1;
   }
 }
+.soon__dot2 {
+  animation: soon 1s 0.2s infinite;
+}
+@keyframes soon {
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+.soon__dot3 {
+  animation: soon 1s 0.4s infinite;
+}
+@keyframes soon {
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
 .footer {
   background-color: #579c87;
   position: fixed;
@@ -205,7 +253,6 @@ main {
 .footer__link:hover {
   animation: wiggle 0.3s infinite;
 }
-
 @keyframes wiggle {
   25% {
     transform: rotateZ(5deg);
@@ -214,6 +261,7 @@ main {
     transform: rotateZ(-5deg);
   }
 }
+
 /* pages */
 .normalTitle {
   font-family: "Roboto", sans-serif;
@@ -225,9 +273,32 @@ main {
   width: 80vw;
   margin: 0 auto;
   padding: 1rem;
+  padding-top: 2rem;
   box-shadow: 0px 0px 8px #ccc;
   font-size: 1rem;
   text-align: center;
+}
+@media screen and (min-width: 500px) {
+  .card {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card {
+    width: 80%;
+    max-width: 600px;
+    padding: 4rem;
+  }
+}
+.card h2 {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .card h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+  }
 }
 .card__note {
   background-color: #fcdfdb;
@@ -257,7 +328,8 @@ main {
 .card__delice__title {
   font-family: "Dancing Script", cursive;
   font-size: 2rem;
-  background: linear-gradient(to right, #0431df, #0887fb);
+  font-weight: lighter;
+  background: linear-gradient(to right, #0228dd, #229df9);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -283,6 +355,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 500px) {
+  .card__section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .card__section__title {
   font-size: 1.3rem;
@@ -435,14 +513,32 @@ main {
 .card__section__bar {
   width: 30vw;
 }
+@media screen and (min-width: 500px) {
+  .card__section__bar {
+    width: 30%;
+    max-width: 200px;
+  }
+}
 .card__section__bar--left {
   transform: rotateX(180deg);
+}
+@media screen and (min-width: 500px) {
+  .card__section__bar--left {
+    transform: none;
+  }
 }
 .card__li {
   margin-bottom: 0.8rem;
   list-style-type: none;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .card__li {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
 }
 .card__li p:nth-child(2) {
   font-weight: bold;
@@ -456,6 +552,11 @@ main {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .card__footer {
+    flex-direction: row;
+  }
+}
 .card__footer__img {
   width: 50px;
   height: 50px;
@@ -465,16 +566,31 @@ main {
   font-size: 1.2rem;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) {
+  .card__footer h3 {
+    font-size: 1.8rem;
+  }
+}
+
+ul {
+  margin-bottom: 3rem;
+}
 
 /* Mentions légales */
 .mentions {
-  background-color: #579c87;
+  background-color: #4d8976;
   margin: 1rem auto;
   padding: 1rem;
   width: 80vw;
   border-radius: 10px;
   box-shadow: 0px 0px 8px #ccc;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .mentions {
+    width: 600px;
+    margin-top: 4rem;
+  }
 }
 .mentions h2 {
   font-family: "montserrat", sans-serif;

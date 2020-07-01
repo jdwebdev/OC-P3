@@ -1,9 +1,42 @@
-@mixin underlineAnim ($color){
+
+@mixin colorGradient($color1,$color2){
+    background: linear-gradient(to right, $color1, $color2);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+/* Animations */
+@mixin soonAnim($delay){
+
+    animation: soon 1s $delay infinite;
+
+    @keyframes soon{
+        50%{
+            transform:scale(1.5);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin wiggleAnim{
+
+    animation: wiggle 0.3s infinite;
+
+    @keyframes wiggle{
+        25%{
+            transform: rotateZ(5deg);
+        }
+        75%{
+            transform: rotateZ(-5deg);
+        }
+    }
+}
+@mixin underlineAnim($color){
     
     background-color: $color;
     animation: underline 0.5s ease-in-out forwards;
     
-    @keyframes underline {
+    @keyframes underline{
         from{
             transform: scaleX(0);
             opacity: 0;
@@ -15,11 +48,11 @@
     }
 }
 
-@mixin underlineOutAnim {
+@mixin underlineOutAnim{
 
     animation: underlineOut 0.5s ease-in-out forwards;
 
-    @keyframes underlineOut {
+    @keyframes underlineOut{
         from{
             transform: scaleX(1);
             opacity: 1;
@@ -28,5 +61,22 @@
             transform: scaleX(0);
             opacity: 0;
         }
+    }
+}
+
+/* Media queries */
+@mixin smallScreen{
+    @media screen and (min-width: map-get($breakpoints, small)){
+        @content;
+    }
+}
+@mixin middleScreen{
+    @media screen and (min-width: map-get($breakpoints, middle)){
+        @content;
+    }
+}
+@mixin largeScreen{
+    @media screen and (min-width: map-get($breakpoints, large)){
+        @content;
     }
 }

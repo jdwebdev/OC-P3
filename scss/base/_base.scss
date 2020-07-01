@@ -26,6 +26,14 @@ body{
 
 main{
     margin-bottom:5rem;
+    @include middleScreen{
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
+    @include largeScreen{
+        max-width: 800px;
+    }
 }
 
 .menu{
@@ -35,6 +43,10 @@ main{
     margin-top:2rem;
     box-shadow: 0px 0px 8px #ccc;
     text-align:center;
+
+    @include middleScreen {
+        width: 250px;
+    }
 
     &__img{
         width:50px;
@@ -57,9 +69,12 @@ main{
         div{
             margin:0 auto;
             width:60vw;
-
             transform: scale(1);
             transition: all 0.4s;
+
+            @include middleScreen{
+                width:80%;
+            }
         }
         &:hover div{
             transform: scale(1.2);
@@ -100,9 +115,7 @@ main{
         h2{
             font-size:1rem;
             font-family: $chic-title-font;
-            background: linear-gradient(to right,#d8852e,#905bfd);
-            -webkit-background-clip:text;
-            color:transparent;
+            @include colorGradient(#d8852e,#905bfd);
         }
     }
     &__delice{
@@ -119,9 +132,8 @@ main{
 
         h2{
             font-family: $delice-title-font;
-            background: linear-gradient(to right,#0431df,#0887fb);
-            -webkit-background-clip:text;
-            color:transparent;
+            font-weight:lighter;
+            @include colorGradient($delice-color1, $delice-color3);
         }
     }
     &__palette{
@@ -138,9 +150,7 @@ main{
         
         h2{
             font-family: $palette-title-font;    
-            background: linear-gradient(to right,#3d9339,#bfff7e);
-            -webkit-background-clip:text;
-            color:transparent;
+            @include colorGradient(#3d9339, #bfff7e)
         }
     }
 }
@@ -148,6 +158,10 @@ main{
 .flex{
     display:flex;
     flex-direction: column;
+    @include middleScreen{
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 .soon{
@@ -161,6 +175,9 @@ main{
     justify-content: center;
     align-items: center;
 
+    @include middleScreen{
+        width: 50%;
+    }
 
     &__text{
         font-family: $header-footer-font;
@@ -181,23 +198,13 @@ main{
         }
     }
     &__dot1{
-        animation: soonAnim 1s 0s infinite;
+        @include soonAnim(0s);
     }
     &__dot2{
-        animation: soonAnim 1s 0.2s infinite;
+        @include soonAnim(0.2s);
     }
     &__dot3{
-        animation: soonAnim 1s 0.4s infinite;
-    }
-}
-
-
-
-@keyframes soonAnim {
-    
-    50%{
-        transform:scale(1.5);
-        opacity: 1;
+        @include soonAnim(0.4s);
     }
 }
 
@@ -221,22 +228,10 @@ main{
         text-decoration: none;
 
         &:hover{
-            animation: wiggle 0.3s infinite;
+            @include wiggleAnim;
         }
     }
 }
-
-@keyframes wiggle {
-
-    25%{
-        transform: rotateZ(5deg);
-    }
-    75%{
-        transform: rotateZ(-5deg);
-    }
-}
-
-
 
 /* pages */
 .normalTitle{
@@ -249,9 +244,29 @@ main{
     width: 80vw;
     margin: 0 auto;
     padding: 1rem;
+    padding-top:2rem;
     box-shadow: 0px 0px 8px #ccc;
     font-size:1rem;
     text-align:center;
+
+    @include smallScreen{
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    @include middleScreen{
+        width: 80%;
+        max-width: 600px;
+        padding: 4rem;
+    }
+
+    h2{
+        margin-bottom: 2rem;
+        @include middleScreen{
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+        }
+    }
 
     &__note{
         background-color: $note-bg-color;
@@ -272,9 +287,7 @@ main{
         &__title{
             font-family: $chic-title-font;
             font-weight: lighter;
-            background: linear-gradient(to right,#d8852e,#905bfd);
-            -webkit-background-clip:text;
-            color:transparent;
+            @include colorGradient(#d8852e,#905bfd);
         }
     }
     &__delice{
@@ -284,9 +297,8 @@ main{
         &__title{
             font-family: $delice-title-font;
             font-size:2rem;
-            background: linear-gradient(to right,#0431df,#0887fb);
-            -webkit-background-clip:text;
-            color:transparent;
+            font-weight:lighter;
+            @include colorGradient($delice-color1, $delice-color3);
         }
 
         h3{
@@ -299,9 +311,7 @@ main{
         &__title{
             font-family: $palette-title-font;
             font-size: 2rem;
-            background: linear-gradient(to right,#3d9339,#bfff7e);
-            -webkit-background-clip:text;
-            color:transparent;
+            @include colorGradient(#3d9339, #bfff7e)
         }
         h3{
             font-size: 1.1rem;
@@ -313,6 +323,11 @@ main{
         display:flex;
         flex-direction: column;
         align-items: center;
+
+        @include smallScreen{
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         &__title{
             font-size: 1.3rem;
@@ -370,8 +385,17 @@ main{
 
         &__bar{
             width:30vw;
+
+            @include smallScreen{
+                width: 30%;
+                max-width: 200px;
+            }
             &--left{
                 transform: rotateX(180deg);
+
+                @include smallScreen{
+                    transform: none;
+                }
             }
         }
     }
@@ -381,6 +405,13 @@ main{
         list-style-type: none;
         display:flex;
         flex-direction: column;
+
+        @include middleScreen{
+            flex-direction: row;
+            justify-content: space-between;
+            font-size:0.8rem;
+        }
+
         p:nth-child(2){
             font-weight:bold;
         }
@@ -395,6 +426,10 @@ main{
         justify-content: center;
         align-items: center;
 
+        @include middleScreen{
+            flex-direction: row;
+        }
+
         &__img{
             width:50px;
             height:50px;
@@ -403,19 +438,31 @@ main{
             font-family: $note-title-font;
             font-size:1.2rem;
             font-weight: 500;
+
+            @include middleScreen{
+                font-size:1.8rem;
+            }
         }
     }
+}
+ul{
+    margin-bottom:3rem;
 }
 
 /* Mentions légales */
 .mentions{
-    background-color: $main-bg-color;
+    background-color: $mentions-bg-color;
     margin: 1rem auto;
     padding: 1rem;
     width: 80vw;
     border-radius: 10px;
     box-shadow: 0px 0px 8px #ccc;
     text-align: center;
+
+    @include middleScreen{
+        width: 600px;
+        margin-top: 4rem;
+    }
 
     h2{
         font-family: $header-footer-font;
