@@ -1,0 +1,128 @@
+/* Accueil */
+.flex{
+    display:flex;
+    flex-direction: column;
+    @include middleScreen{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.menu{
+    width:75vw;
+    height:280px;
+    margin: 0 auto;
+    margin-top:2rem;
+    box-shadow: 0px 0px 8px #ccc;
+    text-align:center;
+
+    @include middleScreen {
+        width: 250px;
+    }
+
+    &__img{
+        width:50px;
+        height:50px;
+        margin:0 auto;
+    }
+
+    &__link{
+        height:100%;
+        text-decoration: none;
+        font-size:1.5rem;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        
+        h2{
+            font-size:1.4rem;
+            margin-bottom:1rem;
+        }
+        div{
+            margin:0 auto;
+            width:60vw;
+            transform: scale(1);
+            transition: all 0.4s;
+
+            @include middleScreen{
+                width:80%;
+            }
+        }
+        &:hover div{
+            transform: scale(1.2);
+            opacity:0.6;
+        }
+    }
+    
+    &__note{
+        background-color: $note-bg-color;
+        font-family: $card-font;
+        
+        color: $note-txt-color;
+        text-transform: uppercase;
+    
+        .menu__link{
+            color: $note-txt-color;
+        }
+
+        h2{
+            font-family: $note-title-font;
+            font-weight:500;
+            text-transform: initial;
+        }
+        
+    }
+    &__chic{
+        background-color: $chic-bg-color;
+        font-family: $chic-menu-font;
+        
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+
+        .menu__link{
+            color:$chic-txt-color;
+        }
+
+        h2{
+            font-size:1rem;
+            font-family: $chic-title-font;
+            @include colorGradient(#d8852e,#905bfd);
+        }
+    }
+    &__delice{
+        background-color: $delice-bg-color;
+        font-family: $card-font;
+
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+
+        .menu__link{
+            color:$delice-txt-color;
+        }
+
+        h2{
+            font-family: $delice-title-font;
+            font-weight:lighter;
+            @include colorGradient($delice-color1, $delice-color3);
+        }
+    }
+    &__palette{
+        background-color: $palette-bg-color;
+        font-family: $card-font;
+
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+
+        .menu__link{
+            color:$palette-txt-color;
+        }
+        
+        h2{
+            font-family: $palette-title-font;    
+            @include colorGradient(#3d9339, #bfff7e)
+        }
+    }
+}

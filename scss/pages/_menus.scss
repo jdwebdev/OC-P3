@@ -1,0 +1,215 @@
+/* Page menu */
+.normalTitle{
+    font-family: $normal-font;
+    text-align:center;
+    margin: 1rem 0;
+}
+
+.card{
+    width: 80vw;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top:2rem;
+    box-shadow: 0px 0px 8px #ccc;
+    font-size:1rem;
+    text-align:center;
+
+    @include smallScreen{
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    @include middleScreen{
+        width: 80%;
+        max-width: 600px;
+        padding: 4rem;
+    }
+
+    h2{
+        margin-bottom: 2rem;
+        @include middleScreen{
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+        }
+    }
+    ul{
+        margin-bottom:3rem;
+    }
+
+    &__note{
+        background-color: $note-bg-color;
+        font-family: $card-font;
+        color: $note-txt-color;
+        
+        &__title{
+            font-family: $note-title-font;
+            font-weight:500;
+            font-size: 2rem;
+        }
+    }
+
+    &__chic{
+        background-color: $chic-bg-color;
+        font-family: $chic-txt-font;
+
+        &__title{
+            font-family: $chic-title-font;
+            font-weight: lighter;
+            @include colorGradient(#d8852e,#905bfd);
+        }
+    }
+    &__delice{
+        background-color: $delice-bg-color;
+        font-family: $card-font;
+
+        &__title{
+            font-family: $delice-title-font;
+            font-size:2rem;
+            font-weight:lighter;
+            @include colorGradient($delice-color1, $delice-color3);
+        }
+
+        h3{
+            font-size:1.1rem;
+        }
+    }
+    &__palette{
+        background-color: $palette-bg-color;
+        font-family: $card-font;
+        &__title{
+            font-family: $palette-title-font;
+            font-size: 2rem;
+            @include colorGradient(#3d9339, #bfff7e)
+        }
+        h3{
+            font-size: 1.1rem;
+        }
+    }
+
+    &__section{
+        margin:1rem 0;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include smallScreen{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__title{
+            font-size: 1.3rem;
+
+            &::after{
+                content:"";
+                display:block;
+                position: relative;
+                top:-4px;
+                height:2px;
+                
+                transform-origin: left;
+                transition: all 0.5s ease-in-out;
+                @include underlineOutAnim;
+            }
+            
+            &__note:hover::after{
+                @include underlineAnim($note-txt-color);
+            }
+            &__chic1:hover::after{
+                @include underlineAnim($chic-color1);
+            }
+            &__chic2:hover::after{
+                @include underlineAnim($chic-color2);
+            }
+            &__chic3:hover::after{
+                @include underlineAnim($chic-color3);
+            }
+            &__delice1:hover::after{
+                @include underlineAnim($delice-color1);
+            }
+            &__delice2:hover::after{
+                @include underlineAnim($delice-color2);
+            }
+            &__delice3:hover::after{
+                @include underlineAnim($delice-color3);
+            }
+            &__palette:hover::after{
+                @include underlineAnim($palette-txt-color);
+            }
+        }
+        &__chic{
+            font-family: $chic-cardtitle-font;
+            font-size:1.2rem;
+        }
+        &__chic1 h3, &__chic1+ul{
+            color: $chic-color1;
+        }
+        &__chic2 h3, &__chic2+ul{
+            color: $chic-color2;
+        }
+        &__chic3 h3, &__chic3+ul{
+            color: $chic-color3;
+        }
+
+        &__bar{
+            width:30vw;
+
+            @include smallScreen{
+                width: 30%;
+                max-width: 200px;
+            }
+            &--left{
+                transform: rotateX(180deg);
+
+                @include smallScreen{
+                    transform: none;
+                }
+            }
+        }
+    }
+
+    &__li{
+        margin-bottom: 0.8rem;
+        list-style-type: none;
+        display:flex;
+        flex-direction: column;
+
+        @include middleScreen{
+            flex-direction: row;
+            justify-content: space-between;
+            font-size:0.8rem;
+        }
+
+        p:nth-child(2){
+            font-weight:bold;
+        }
+        &__chic p:nth-child(2){
+            font-weight: normal;            
+        }
+    }
+
+    &__footer{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include middleScreen{
+            flex-direction: row;
+        }
+
+        &__img{
+            width:50px;
+            height:50px;
+        }
+        h3{
+            font-family: $note-title-font;
+            font-size:1.2rem;
+            font-weight: 500;
+
+            @include middleScreen{
+                font-size:1.8rem;
+            }
+        }
+    }
+}

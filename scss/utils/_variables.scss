@@ -1,3 +1,5 @@
+/* Variables */
+
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Kaushan+Script&family=Montserrat:wght@400;700&family=PT+Serif&family=Roboto&family=Rozha+One&family=Source+Serif+Pro&display=swap');
 
 @font-face{
@@ -8,37 +10,37 @@
 }
 
 /* Colors */
-$main-bg-color: #579c87;
-$note-bg-color: #fcdfdb;
-$chic-bg-color: #fff5fe;
-$delice-bg-color: #f9f9f9;
-$palette-bg-color: #fdfffd;
+$main-bg-color:     #579c87;
+$note-bg-color:     #fcdfdb;
+$chic-bg-color:     #fff5fe;
+$delice-bg-color:   #f9f9f9;
+$palette-bg-color:  #fdfffd;
 $mentions-bg-color: #4d8976;
 
-$main-txt-color: #fdcb46;
-$note-txt-color: #3c1218;
-$chic-txt-color: #c77412;
-$delice-txt-color: #0887fb;
+$main-txt-color:    #fdcb46;
+$note-txt-color:    #3c1218;
+$chic-txt-color:    #c77412;
+$delice-txt-color:  #0887fb;
 $palette-txt-color: #72bf56;
 
-$chic-color1: #c77412;
-$chic-color2: #a56799;
-$chic-color3: #6e4ccc;
+$chic-color1:   #c77412;
+$chic-color2:   #a56799;
+$chic-color3:   #6e4ccc;
 $delice-color1: #0228dd;
 $delice-color2: #0670f3;
 $delice-color3: #229df9;
 
 /* Fonts */
-$header-footer-font: 'montserrat', sans-serif;
-$note-title-font: 'Devonshire', cursive;
-$chic-title-font: 'Croissant One', cursive;
-$delice-title-font: 'Dancing Script', cursive;
-$palette-title-font: 'Kaushan Script', cursive;
-$card-font: 'segoe_print', sans-serif;
-$chic-menu-font: 'Rozha One', serif;
-$normal-font: 'Roboto', sans-serif;
+$header-footer-font:  'montserrat', sans-serif;
+$note-title-font:     'Devonshire', cursive;
+$chic-title-font:     'Croissant One', cursive;
+$delice-title-font:   'Dancing Script', cursive;
+$palette-title-font:  'Kaushan Script', cursive;
+$card-font:           'segoe_print', sans-serif;
+$chic-menu-font:      'Rozha One', serif;
+$normal-font:         'Roboto', sans-serif;
 $chic-cardtitle-font: 'Source Serif Pro', serif;
-$chic-txt-font: 'PT Serif', serif;
+$chic-txt-font:       'PT Serif', serif;
 
 /* Media queries */
 $breakpoints: (

@@ -1,0 +1,18 @@
+/* Header */
+.header{
+    background-color: $main-bg-color;
+    padding: 1rem 0;
+    z-index: 10;
+
+    &__link{
+        text-decoration: none;
+    }
+    &__title{
+        font-family: $header-footer-font;
+        font-size:2rem;
+        font-weight: 700;
+        letter-spacing: -0.1rem;
+        text-align: center;
+        color: $main-txt-color;
+    }
+}

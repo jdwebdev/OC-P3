@@ -1,0 +1,44 @@
+/* Soon */
+.soon{
+    background-color: $main-bg-color;
+    height:50px;
+    width:75vw;
+    border-radius:0.5rem;
+    margin: 1.5rem auto;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    @include middleScreen{
+        width: 50%;
+    }
+
+    &__text{
+        font-family: $header-footer-font;
+        font-size:1.3rem;
+        color:$main-txt-color;
+    }
+    &__dots{
+        margin-left: 15px;
+        height:90%;
+        display:flex;
+        
+        color:$main-txt-color;
+        font-size:2rem;
+        
+        div{
+            width:10px;
+            opacity: 0;
+        }
+    }
+    &__dot1{
+        @include soonAnim(0s);
+    }
+    &__dot2{
+        @include soonAnim(0.2s);
+    }
+    &__dot3{
+        @include soonAnim(0.4s);
+    }
+}
