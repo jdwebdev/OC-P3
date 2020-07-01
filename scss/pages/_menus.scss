@@ -23,8 +23,8 @@
         width: 80%;
         max-width: 600px;
         padding: 4rem;
-        text-align: left;
     }
+
 
     h2{
         margin-bottom: 2rem;
@@ -35,6 +35,9 @@
     }
     ul{
         margin-bottom:3rem;
+        @include middleScreen{
+            text-align: left;
+        }
     }
 
     &__note{
