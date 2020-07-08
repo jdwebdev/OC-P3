@@ -13,6 +13,9 @@
     @include middleScreen{
         width: 50%;
     }
+    @include largeScreen{
+        margin-top: 3rem;
+    }
 
     &__text{
         font-family: $header-footer-font;
