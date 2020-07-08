@@ -12,6 +12,8 @@
     display:flex;
     justify-content: space-between;
 
+    @include mobileLandscape;
+
     &__link{
         font-family: $header-footer-font;
         font-size:1rem;

@@ -134,6 +134,11 @@ main {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-height: 450px) and (orientation: landscape) {
+  .footer {
+    position: static;
+  }
+}
 .footer__link {
   font-family: "montserrat", sans-serif;
   font-size: 1rem;
